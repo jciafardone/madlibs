@@ -1,0 +1,48 @@
+<!-- <!doctype html>
+<html>
+<head>
+  <title>Hi There!</title>
+  <link rel="stylesheet"
+        href="/static/madlibs.css">
+</head>
+<body>
+
+<h1>Here's Your Madlib!</h1>
+
+<p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+    When {{ person }} went to pick it up, it burst into flames in a totally
+    {{ adjective }} way.</p>
+
+</body>
+</html> -->
+
+
+
+{% extends 'base.html' %}
+
+{% block title %} Hi There! {% endblock %}
+
+{% block heading %} Here's your Madlib! {% endblock %}
+
+{% block content %} 
+    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+        When {{ person }} went to pick it up, it burst into flames in a totally
+        {% if adjective_length == 1 %}
+            {{ adjective[0] }}
+        {% elif adjective_length == 2 %}
+            {{ adjective[0] }} {{ word }} {{ adjective[1] }}
+        {% else %} 
+          {% for item in adjective %}
+            {% if item == adjective[-1] %}
+              and {{ item }}
+            {% else %}
+              {{ item }},
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        way.</p>
+
+
+       
+{% endblock %}
+

@@ -1,0 +1,61 @@
+<!-- <!doctype html>
+<html>
+<head>
+  <title>A Madlib Game</title>
+</head>
+<body>
+    <form action="/madlib">
+      Please enter a person, a color, a noun, and an adjective.
+      <br>
+      Please enter a person: <input type="text" name="person">
+      <br>
+      Please select a color: <br>
+      <input type = "radio" name="color" value="red"> Red <br>
+      <input type = "radio" name="color" value="blue"> Blue <br>
+      <input type = "radio" name="color" value="yellow"> Yellow <br>
+      <input type = "radio" name="color" value="green"> Green <br>
+      <select name="noun">
+        <option value="cat">cat</option>
+        <option value="car">car</option>
+        <option value="tree">tree</option>
+        <option value="hat">hat</option>
+      </select> <br>
+      <input type="checkbox" name="adjective" value="big">big<br>
+      <input type="checkbox" name="adjective" value="small">small<br>
+      <input type="checkbox" name="adjective" value="hot">hot<br>
+      <input type="checkbox" name="adjective" value="cold">cold<br>
+      <br>
+      <input type="submit"> 
+    </form>
+</body>
+</html> -->
+
+{% extends 'base.html' %}
+
+{% block title %} A Madlib Game {%endblock%}
+
+{% block content %}
+<form action="/madlib">
+    Please enter a person, a color, a noun, and an adjective.
+    <br>
+    Please enter a person: <input type="text" name="person">
+    <br>
+    Please select a color: <br>
+    <input type = "radio" name="color" value="red"> Red <br>
+    <input type = "radio" name="color" value="blue"> Blue <br>
+    <input type = "radio" name="color" value="yellow"> Yellow <br>
+    <input type = "radio" name="color" value="green"> Green <br>
+    <select name="noun">
+      <option value="cat">cat</option>
+      <option value="car">car</option>
+      <option value="tree">tree</option>
+      <option value="hat">hat</option>
+    </select> <br>
+    <input type="checkbox" name="adjective" value="big">big<br>
+    <input type="checkbox" name="adjective" value="small">small<br>
+    <input type="checkbox" name="adjective" value="hot">hot<br>
+    <input type="checkbox" name="adjective" value="cold">cold<br>
+    <br>
+    <input type="submit"> 
+  </form>
+{%endblock%}
